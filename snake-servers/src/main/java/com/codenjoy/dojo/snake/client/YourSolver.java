@@ -36,6 +36,7 @@ import com.codenjoy.dojo.services.RandomDice;
 public class YourSolver implements Solver<Board> {
 
     private static final String USER_NAME = "dmitriy.roy@ita.biz.ua";
+    public static int countDice = 1;
 
     private Dice dice;
     private Board board;
