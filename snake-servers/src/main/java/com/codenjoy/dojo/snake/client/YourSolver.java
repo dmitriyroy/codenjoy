@@ -48,8 +48,28 @@ public class YourSolver implements Solver<Board> {
     public String get(Board board) {
         this.board = board;
         System.out.println(board.toString());
+        String outString = Direction.UP.toString();
 
-        return Direction.UP.toString();
+        switch(countDice) {
+            case 1:
+                outString = Direction.UP.toString();
+                countDice++;
+                break;
+            case 2:
+                outString = Direction.LEFT.toString();
+                countDice++;
+                break;
+            case 3:
+                outString = Direction.DOWN.toString();
+                countDice++;
+                break;
+            case 4:
+                outString = Direction.RIGHT.toString();
+                countDice = 1;
+                break;
+        }
+
+        return outString;
     }
 
     public static void main(String[] args) {
