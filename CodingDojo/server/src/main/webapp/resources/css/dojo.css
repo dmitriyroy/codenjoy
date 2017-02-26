@@ -1,0 +1,130 @@
+/*-
+ * #%L
+ * Codenjoy - it's a dojo-like platform from developers to developers.
+ * %%
+ * Copyright (C) 2016 Codenjoy
+ * %%
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public
+ * License along with this program.  If not, see
+ * <http://www.gnu.org/licenses/gpl-3.0.html>.
+ * #L%
+ */
+.score-info {
+    color:yellow;
+    text-shadow: 6px 6px 10px black, 4px 4px 4px red;
+    font-size:90px;
+    display:none;
+}
+
+.width-calculator{
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space:nowrap;
+}
+
+#table-logs th.center, #table-logs td.center  {
+    text-align : center;
+}
+
+#table-logs {
+    font-size:25px;
+}
+
+label.error {
+    color:red;
+    position:absolute;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 3px 3px 3px 3px;
+}
+
+#selectedLevels {
+    width:300px;
+}
+
+.admin-table {
+    background-color: papayawhip;
+    margin:10px;
+}
+
+#adminSettings input {
+    width:150px;
+    height:24px;
+}
+
+#joystick {
+    display : none;
+}
+
+#joystick td {
+    width : 30px;
+    height : 30px;
+    text-align:center;
+}
+
+.joystick_act_params {
+    width: 55px;
+    height: 20px;
+}
+
+#chat-container {
+    left: 850px;
+    width: 450px;
+}
+
+#leaderboard {
+    width: 450px;
+}
+
+#want-donate {
+    line-height: 34px;
+}
+
+#donate-container input[type=text]{
+    width: 55px;
+}
+
+#donate-container select{
+    width: 70px;
+}
+
+#donate {
+    text-align: center;
+}
+
+#donate-container {
+    background-color: white;
+}
+
+#want-donate {
+    font-size: 25px;
+}
+
+#gameName {
+    width: 210px;
+    height: 27px;
+}
+
+#advertisement {
+    text-align:center;
+    width:250px;
+    margin-left: 104px;
+    margin-bottom: 13px;
+    margin-top: -26px;
+}
+
+.player-canvas {
+    float: left;
+}

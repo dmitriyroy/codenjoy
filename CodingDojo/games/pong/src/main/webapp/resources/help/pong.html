@@ -1,0 +1,110 @@
+<!--
+  #%L
+  Codenjoy - it's a dojo-like platform from developers to developers.
+  %%
+  Copyright (C) 2016 Codenjoy
+  %%
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public
+  License along with this program.  If not, see
+  <http://www.gnu.org/licenses/gpl-3.0.html>.
+  #L%
+  -->
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Pong - Классика жанра</title>
+    <link href="files/style.css" media="all" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: white;"
+      class="single single-post postid-170 single-format-standard logged-in admin-bar singular one-column content customize-support">
+<a target="_blank" href="https://github.com/codenjoyme"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 100;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+<div id="page" class="hfeed">
+    <div id="main">
+        <div id="primary">
+            <div id="content" role="main">
+                <header class="entry-header">
+                    <h1 class="entry-title">Pong — как играть?</h1>
+                </header>
+                <div class="entry-content">
+                    <div class="page-restrict-output">
+                        <div class="for_players">
+                            <h2>В чем суть игры?</h2>
+                            <p>На поле распологаются две вертикальные панели, играет либо
+                                один персонаж, либо два. Цель игры забить противнику гол
+                                и набрать больше очков.</p>
+                            <p>Вновь прибывшие игроки добавляются на новую панель.</p>
+                            <p>Панель (доска) отбивающая мяч перемещается только вертикально (Up и Down)</p>
+                            <p>Побеждает игрок с большим числом очков (до условленного времени).</p>
+                            <p>После забития гола мяч появляется в центре поля
+                                и наченает движение имея рандомное направление</p>
+                            <p>Итак, игрок регистрируется на сервере, указывая свой userName</p>
+                            <p>Далее необходимо подключиться <a href="/codenjoy-contest/resources/user/pong-servers.zip">из кода</a> к серверу через вебсокеты.
+                                Адрес для подключения к игре на сервере http://codenjoy.com:</p>
+                            <pre>ws://tetrisj.jvmhost.net:12270/codenjoy-contest/ws?user=userName</pre>
+                            <p>После этого клиент будет регулярно (каждую секунду) получать строку
+                                символов — с закодированным состоянием доски. Формат таков</p>
+                            <pre>^board=(.*)$</pre>
+                            <p>с помощью этого regexp можно выкусить строку доски.
+                                Вот пример строки от сервера:</p>
+                            <pre>
+                                ------------------------------
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .#                          #.
+                                .#                          #.
+                                .#              *           #.
+                                .#                          #.
+                                .#                          #.
+                                .#                          #.
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                .                            .
+                                ------------------------------
+                            </pre>
+                            <p>
+                                Первый символ строки соответствует ячейке расположенной в левом верхнем
+                                углу и имеет координату [0, 0].
+                            </p>
+                            <p>Расшифровка символов</p>
+                            <p>Cтена, через которую нельзя пройти</p>
+                            <pre>HORIZONTAL_WALL('-')</pre>
+                            <p>Игровая панель (доска отбивающая мяч)</p>
+                            <pre>PANEL('#')</pre>
+                            <p>Команд две: UP, DOWN – приводят к движению панели
+                                игрока в заданном направлении на 1 клетку;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
